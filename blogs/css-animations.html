@@ -1,0 +1,476 @@
+
+<!DOCTYPE html>
+
+
+
+<html lang="en-gb">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="description" content="Read my blog on the limitations of CSS and how I was able to use CSS animation libaries to create a web based UX report.">
+
+  <meta name="author" content="Adam Waterhouse">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Animations </title>
+
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+<header class="page-header">
+
+  <video    poster="../img/blog.jpg">
+
+  </video>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="header-content">
+
+
+
+ <nav>
+
+<ul>
+
+<li><a href="../index.html">Home</a></li>
+
+<li><a href="../portfolio.html">Portfolio</a></li>
+
+<li><a href="../blog.html">Blog</a></li>
+
+</ul>
+
+</nav>
+
+<div class="main-heading">
+
+    <h1>CSS Animations</h1></div>
+
+   <a class="button" href="../portfolio.html">View My Portfolio</a>
+
+   <a class="button" href="../cv.html">View My CV</a>
+
+ </div>
+
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+<div class="bread-crumbs">
+
+  <ul>
+
+  <li><a href="../blog.html"> Blog</a></li>
+
+  <li>&#62;</li>
+
+  <strong><li class="active">CSS Animations</li></strong>
+
+  </ul>
+
+  </div>
+
+  
+
+<div class="blog-post">
+
+
+
+<div class="blog-navigation">
+
+<a href="portfolio-improvements.html"><img src="../img/left-arrow.svg" alt="left arrow icon"></a>
+
+<a class="left-blog" href="portfolio-improvements.html">Portfolio Improvements</a>
+
+<a class="right-blog" href="php-to-database.html">Using PHP</a>
+
+<a href="php-to-database.html"><img class="flip" src="../img/right-arrow.svg" alt="right arrow icon"></a>
+
+</div>
+
+
+
+<div class="date-published">
+
+<p class="active">Published: 23/03/2020</p>
+
+</div>
+
+
+
+
+<h2>Why This Project?</h2>
+<p>The list of tasks that CSS can do is growing <a href="https://www.smashingmagazine.com/2018/05/future-of-web-design/">(Liew, 2018),</a> tasks that previously relied on Java Script are becoming part of the extensive range of CSS properties, making potential scripting issues a thing of the past and websites load even quicker <a href="https://www.amberweinberg.com/replacing-js-functionality-with-css-properties/">(Amberweinberg, 2016).</a> However, what are the limits of CSS, and specifically CSS animations? I wanted to explore these limits and see if I could transform my UX report made in PowerPoint into an accessible, responsive and engaging piece of web content using pure CSS. I’ve been doing a lot of research recently about the UX of my own portfolio <a href="https://www.invisionapp.com/inside-design/improve-ux-portfolio/">(Doody, 2018),</a> and realised that having a UX portfolio in .pdf and .pptx formats are a huge usability and accessibility issue. I approached this project with an open mind but a very limited knowledge around CSS animations and its full capabilities.</p>
+
+<a href="http://www.17076386.webdevmmu.uk/UX-Report/index.html">
+<h2>View my CSS Animations Presentation</h2></a>
+
+<a href="http://www.17076386.webdevmmu.uk/UX-Report/index.html">
+<img class="sketches" alt="Screenshot of Treekits UX report made with CSS Animations" src="../img/treeekits-report.PNG"></a>
+
+
+
+<h2>The Set Up</h2>
+
+<p>Before a single line of CSS was typed, I needed to make my report web based. This meant marking up all the content in the presentation semantically in HTML, to ensure that before anything else that it was accessible (Keith and Andrew, 2015), responsive and usable with just the HTML.</p>
+
+<blockquote class="twitter-tweet tw-align-center" data-theme="dark"><p lang="en" dir="ltr">Turning off <a href="https://twitter.com/hashtag/CSS?src=hash&amp;ref_src=twsrc%5Etfw">#CSS</a> is the quickest way to see if something is basically accessible.<br>User agent styles / visual hierarchy? ✔️ semantic markup<br>Reads logically? ✔️ Good source order<br>Images still there? ✔️ &lt;img&gt; tags used, not backgrounds</p>&mdash; Heydon (@heydonworks) <a href="https://twitter.com/heydonworks/status/969520320754438144?ref_src=twsrc%5Etfw">March 2, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>This content first approach using HTML <a href="https://webflow.com/blog/the-modern-web-design-process-putting-content-first"> (Cardello, 2017:online)</a> was the ‘foundation of the design’, and enabled me to create a design that fitted the content.</p>
+
+<h2>What is Animate.CSS?</h2>
+<p>When it came to the animations I was inspired by the work of <a href="https://daneden.me/">Danial Eden,</a> a Lead Designer at <a href="https://www.facebook.com/">Facebook</a> and his work on <a href="https://daneden.github.io/animate.css/">Animate.CSS.</a> Dan used keyframe CSS animations to create the easy to use animation library, where once installed locally or linked to the CDN, users can simply state the class name of an animation and assign it to a HTML attribute.</p>
+
+<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="agwaterhouse" data-slug-hash="abOGGde" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="abOGGde">
+  <span>See the Pen <a href="https://codepen.io/agwaterhouse/pen/abOGGde">
+  abOGGde</a> by agwaterhouse (<a href="https://codepen.io/agwaterhouse">@agwaterhouse</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<h2>Timelines</h2>
+<p>To create a timeline effect where different elements come in at different times, I was able to use the delay class that comes built into the Animate.CSS library. This allowed me to create a very similar experience to a PowerPoint presentation, where different elements could come in one after another.</p>
+
+<p class="codepen" data-height="493" data-theme-id="dark" data-default-tab="html,result" data-user="agwaterhouse" data-slug-hash="VwLdZRG" data-preview="true" style="height: 493px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Animations one by one">
+  <span>See the Pen <a href="https://codepen.io/agwaterhouse/pen/VwLdZRG">
+  Animations one by one</a> by agwaterhouse (<a href="https://codepen.io/agwaterhouse">@agwaterhouse</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+<p>However, unlike PowerPoint or other presentation software, you can’t control the timeline of the animations through the users clicks or keyboard inputs, to dictate a different animation coming in or out. However, I discovered that through the use of Java Script you can assign animations to different elements once an action has been completed, such as the user clicking or pressing the keyboard <a href="https://www.w3schools.com/howto/howto_js_add_class.asp">(W3 Schools, no date).</a></p>
+
+
+<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="agwaterhouse" data-slug-hash="YzXOmVb" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Animation on Click">
+  <span>See the Pen <a href="https://codepen.io/agwaterhouse/pen/YzXOmVb">
+  Animation on Click</a> by agwaterhouse (<a href="https://codepen.io/agwaterhouse">@agwaterhouse</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+<h2>Adding Multiple Animations To One Element</h2>
+
+
+<p>Using Animate.CSS presented challenges when attempting to assign more than one animation to an element, such as an &#60;img&#62; tag. I wanted to make the tree image I use on the title page, appear from the bottom of the screen and then also shake after it had animated in.  When attempting this using animation delays, only the last animation played.</p>
+
+<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="agwaterhouse" data-slug-hash="VwLGRQd" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Only one animation plays">
+  <span>See the Pen <a href="https://codepen.io/agwaterhouse/pen/VwLGRQd">
+  Only one animation plays</a> by agwaterhouse (<a href="https://codepen.io/agwaterhouse">@agwaterhouse</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+<p>Research revealed <a href="https://github.com/daneden/animate.css/">no documentation</a> or articles about attempting to do this. Through trial and error, I was able to complete this through containing the  &#60;img&#62; tag I wanted to animate inside another &#60;div&#62; container. Through adding animations to both separate elements and using the delays, I was able to add multiple animations to the same image one after another.</p>
+
+<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="agwaterhouse" data-slug-hash="jOPvRNr" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Animated Tree">
+  <span>See the Pen <a href="https://codepen.io/agwaterhouse/pen/jOPvRNr">
+  Animated Tree</a> by agwaterhouse (<a href="https://codepen.io/agwaterhouse">@agwaterhouse</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<h2>Adapting and Customising the Animations</h2>
+<p>One of the first issues I had with using the Animate.CSS library was customising the animations for my content. Using just the Animate.CSS library I was restricted as I only had a limited amount of control over the way the animations behaved. </p>
+
+
+<p>I went with this problem to the monthly <a href="https://www.meetup.com/CodeUpManchester/">Code UP Manchester</a> event held at <a href="https://www.codecomputerlove.com/"> Code Computer Love</a>, a member of the BBC Software Development team introduced me to the idea of combining key frame animations with the Animate.CSS library. This allowed me to create multiple steps in my animations <a href="https://css-tricks.com/snippets/css/keyframe-animation-syntax/"> (Coyier, 2016)</a> and customise them, for example I was able to alter the SlideOutDown Animation so that it didn’t just move down on the screen, but so that the opacity also faded to 0.</p>
+
+<p>Original Animation:</p>
+<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="agwaterhouse" data-slug-hash="LYVmrNj" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Not Customised Animation">
+  <span>See the Pen <a href="https://codepen.io/agwaterhouse/pen/LYVmrNj">
+  Not Customised Animation</a> by agwaterhouse (<a href="https://codepen.io/agwaterhouse">@agwaterhouse</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+
+<p>Customised Animation:</p>
+
+<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="agwaterhouse" data-slug-hash="PoqdMBN" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Customised Animation ">
+  <span>See the Pen <a href="https://codepen.io/agwaterhouse/pen/PoqdMBN">
+  Customised Animation </a> by agwaterhouse (<a href="https://codepen.io/agwaterhouse">@agwaterhouse</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+<h2>Creating a Hover Effect Using Animate.CSS</h2>
+<p> I wanted to use Animate.CSS to also create hover effects on elements such as buttons. I first attempted to do this using the animation play status property, to set the animation to play on hover and pause otherwise. However, this led to the animation not stopping when the user hovered over the element. </p>
+
+<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="agwaterhouse" data-slug-hash="MWwGyNv" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="The Run Away Button">
+  <span>See the Pen <a href="https://codepen.io/agwaterhouse/pen/MWwGyNv">
+  The Run Away Button</a> by agwaterhouse (<a href="https://codepen.io/agwaterhouse">@agwaterhouse</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+<p>Through storing Animate.CSS animations locally I was able to dictate the number of repetitions and the duration of the animation in my local CSS. This created a much smoother effect.</p>
+
+<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="agwaterhouse" data-slug-hash="eYNLNPm" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Wobbling button ">
+  <span>See the Pen <a href="https://codepen.io/agwaterhouse/pen/eYNLNPm">
+  Wobbling button </a> by agwaterhouse (<a href="https://codepen.io/agwaterhouse">@agwaterhouse</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+<p>However, when testing this animation on mobile, I noticed that the animation was cut off. As mobile users can't hover, the animation only starts to play once the user has clicked a link. The ‘Wobble’ animation that I attempted to use on my buttons could have also made users feel nauseous or dizzy due to the nature of the animation <a href="https://simplyaccessible.com/article/balance-awareness/"> (Featherstone, 2014).</a> I therefore opted to use the ‘Pulse’ animation, which has significantly reduced motion and is therefore more appropriate for users with Vestibular issues and also mobile users.</p>
+
+
+<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="agwaterhouse" data-slug-hash="eYNLwpp" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pulse Button">
+  <span>See the Pen <a href="https://codepen.io/agwaterhouse/pen/eYNLwpp">
+  Pulse Button</a> by agwaterhouse (<a href="https://codepen.io/agwaterhouse">@agwaterhouse</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<h2>So, is CSS All You Need?</h2>
+<p>In short, no. CSS can actually provide more control than traditional presentation software, such as how you can manipulate the smoothness of individual animations. However, CSS is still designed predominately just for layout <a href="https://hostpresto.com/articles/css-role-in-web-design/">(HostPresto, 2013),</a> and is not designed for the interactivity that Java Script provides.</p><br>
+  
+ <p>However, by combining CSS and Java Script it would become possible to almost replicate presentation software exactly. Through adding .addEventListener to my code base, the Animate.CSS animations could be added to a class, so that they animate out of the page once a button is clicked to go on to the next screen.</p><br>
+  
+ <p>
+  A Java Script animation library such as <a href="https://greensock.com/"> GreenSock</a> could have also been appropriate for this project, as it allows users to create animation timelines <a href="https://greensock.com/forums/topic/11328-creating-new-timeline-objects/">(Virtous, 2015).</a> GreenSock animations often also load even quicker than CSS animations and include multiple libraries, giving the developer even more control over the different type of animations <a href="https://www.linkedin.com/pulse/10-benefits-animating-greensock-elke-doevelaar">(Doevelaar ,2016).</a> This could have been useful for providing both page transitions and also the animation of individual elements onto the page.<br><br>
+ </p>
+
+ <p>
+  In conclusion, CSS can be used to replicate presentations, however it was never designed for this, and even as the list of CSS properties grows, I do not believe that it well ever offer the level of interactivity that Java Script provides.</p>
+
+
+
+
+
+
+  <div class="blog-navigation">
+
+    <a href="portfolio-improvements.html"><img src="../img/left-arrow.svg" alt="left arrow icon"></a>
+    
+    <a class="left-blog" href="portfolio-improvements.html">Portfolio Improvements</a>
+    
+    <a class="right-blog" href="php-to-database.html">Using PHP</a>
+    
+    <a href="php-to-database.html"><img class="flip" src="../img/right-arrow.svg" alt="right arrow icon"></a>
+    
+    </div>
+
+  <div class="references">
+    <h2>References</h2>
+    <ul>
+
+     <li>Amberweinberg. (2016) <i>Replacing Js Functionality With Css Properties.</i> 15th April. [Online] [Accessed on 15th January 2020] <a href="https://www.amberweinberg.com/replacing-js-functionality-with-css-properties/">https://www.amberweinberg.com/replacing-js-functionality-with-css-properties/</a></li>
+     
+    <li>Cardello, J. (2017) <i>The modern web design process: putting content first.</i> 5th September. Web Flow Blog. [Online] [Accessed on 5th January 2020] <a href="https://webflow.com/blog/the-modern-web-design-process-putting-content-first">https://webflow.com/blog/the-modern-web-design-process-putting-content-first</a>
+    </li>
+
+    <li>
+    Coyier, C. (2016) <i>Keyframe Animation Syntax.</i> 19th September. CSS-Tricks. [Online] [Accessed on 3rd December 2019] <a href="https://css-tricks.com/snippets/css/keyframe-animation-syntax/">https://css-tricks.com/snippets/css/keyframe-animation-syntax/</a>
+    </li>
+
+    <li>
+    Doevelaar, E. (2016) <i>10 Benefits of animating with GreenSock.</i> 12th August. LinkedIn. [Online] [Accessed 4th March 2020] <a href="https://www.linkedin.com/pulse/10-benefits-animating-greensock-elke-doevelaar">https://www.linkedin.com/pulse/10-benefits-animating-greensock-elke-doevelaar</a>
+    </li>
+
+<li>
+    Doody, S. (2018) <i>How to improve the UX of your UX portfolio.</i> 16th May. Inside Design. [Online] [Accessed on 4th January 2020] <a href="https://www.invisionapp.com/inside-design/improve-ux-portfolio/">https://www.invisionapp.com/inside-design/improve-ux-portfolio/</a>
+
+</li>
+
+
+<li>
+  Featherstone, D. (2014) <i>Balance Awareness Week: iOS8 & vestibular disorders.</i> 30th September. Simple Accessible. [Online] [Accessed on 21st January 2020] <a href="https://simplyaccessible.com/article/balance-awareness/">https://simplyaccessible.com/article/balance-awareness/</a>
+</li>
+
+<li>
+  HostPresto. (2013) <i>What Is CSS’s Role In Web Design?</i> [Online] [Accessed on 12th February 2020] <a href="https://hostpresto.com/articles/css-role-in-web-design/">https://hostpresto.com/articles/css-role-in-web-design/</a>
+</li>
+
+<li>Keith, J., Andrew, R. (2015) <i>HTML 5 For Web Designers.</i> 2nd ed., New York: A Book Apart.
+</li>
+
+<li>Liew, Z. (2018) <i>New CSS Features That Are Changing Web Design.</i> 7th May. Smashing Magazine. [Online] [Accessed on 4th January 2020] <a href="https://www.smashingmagazine.com/2018/05/future-of-web-design/">https://www.smashingmagazine.com/2018/05/future-of-web-design/</a>
+</li>
+
+<li>
+  Virtous. (2015) <i>Creating new timeline objects.</i> 13th February. GreenSock. [Online] [Accessed on 4th March 2020] <a href="https://greensock.com/forums/topic/11328-creating-new-timeline-objects/">https://greensock.com/forums/topic/11328-creating-new-timeline-objects/</a>
+</li>
+
+
+<li>
+  W3 Schools. (no date) <i>How To – Add a Class.</i> [Online] [Accessed on 12th February 2020] <a href="https://www.w3schools.com/howto/howto_js_add_class.asp">https://www.w3schools.com/howto/howto_js_add_class.asp</a>
+
+
+</li>
+
+    
+    </ul>
+    
+    </div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<section>
+
+<footer>
+
+  <h2 id="contact-section">Lets talk?</h2>
+
+
+
+<div class="contact-methods">
+
+<div class="contact-details">
+
+<h2>My Details</h2>
+
+<ul>
+
+<li><a href = "tel:07583646937"><img src="../img/phone.svg" alt="Mobile Phone Icon"><p>07583646937</p></a></li>
+
+<li><a href = "mailto:agwaterhouse@gmail.com"><img src="../img/email.svg" alt="Email icon"><p>agwaterhouse@gmail.com</p></a></li>
+
+<li><a href = "https://www.linkedin.com/in/adam-waterhouse-2a113224/"><img src="../img/linkedin.svg" alt="LinkinIn icon"><p>Adam Waterhouse (LinkedIn)</p></a></li>
+
+<li><a href="https://twitter.com/AdamWaterhous10"><img src="../img/twitter.svg" alt="Twitter Icon"><p>@adamwaterhous10</p></a></li>
+
+</ul> 
+
+</div>
+
+
+
+<div class="contact-form">
+
+<form action="../contact_form.php" method="post" data-netlify="true">
+
+  
+
+  <p><label for="fullname">Full Name</label></p>
+
+  <input id="fullname" type="text" name="fullname" placeholder="Enter your full name">
+
+  
+
+    <p><label for="email">Email Address</label></p>
+
+  <input id="email" type="text" name="email" placeholder="Enter your email address">
+
+
+
+  <p><label for="message">Message</label></p>
+
+  <input id="message" type="text" name="message" placeholder="Got a question or just want a chat?">
+
+  <br>
+
+
+
+<div class="button3"><input type="submit" value="Submit"></div>
+
+</form>
+
+</div>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="../index.html">Home</a></li>
+
+<li><a href="../portfolio.html">Portfolio</a></li>
+
+<li><a href="../blog.html"> Blog</a></li>
+
+
+
+</ul>
+
+</nav>
+
+
+
+<div class="copyright">
+
+<p>&#169;Adam Waterhouse 2019</p>
+
+<p><a href="../credits.html">Image credits</a></p>
+
+<p><a href="https://validator.w3.org/nu/?showsource=yes&doc=http%3A%2F%2Fwww.17076386.webdevmmu.uk/blogs/agency-ready.html">Validate Page on W3C</a></p></div>
+
+
+
+</footer>
+
+</section>
+
+</body>
+
+</html>

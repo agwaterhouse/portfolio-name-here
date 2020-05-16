@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="en-gb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Read about how I created this portfolio site and take a peek at the code I used, the design decisions I made and why.">
+  <meta name="author" content="Adam Waterhouse">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Building My Portfolio Site</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="page-header">
+  <video    poster="../img/blog.jpg">
+  </video>
+
+
+
+
+
+  <div class="header-content">
+
+ <nav>
+<ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../portfolio.html">Portfolio</a></li>
+<li><a href="../blog.html">Blog</a></li>
+</ul>
+</nav>
+<div class="main-heading">
+    <h1>Building My Portfolio</h1></div>
+   <a class="button" href="../portfolio.html">View My Portfolio</a>
+   <a class="button" href="../cv.html">View My CV</a>
+</div>
+</header>
+
+
+
+
+
+
+
+
+
+
+<div class="bread-crumbs">
+  <ul>
+  <li><a href="../blog.html"> Blog</a></li>
+  <li>&#62;	</li>
+  <strong><li class="active">Building My Portfolio</li></strong>
+  </ul>
+  </div>
+
+<div class="blog-post">
+
+
+<div class="blog-navigation">
+<a href="performance-optimisation.html"><img src="../img/left-arrow.svg" alt="left arrow icon"></a>
+<a class="left-blog" href="performance-optimisation.html">Performance & Optimisation</a>
+<a class="right-blog" href="agency-ready.html">Agency Not Ready?</a>
+<a href="agency-ready.html"><img class="flip" src="../img/right-arrow.svg" alt="right arrow icon"></a>
+</div>
+
+<div class="date-published">
+  <p class="active">Published: 30/10/2019</p>
+  </div>
+
+<h2>Design Inspiration</h2>
+
+<p>In Design terms, the <a href="https://www.3squared.com/">(3 Squared, 2019)</a> Software Development website was one of the biggest sources of inspiration for my portfolio site. The video header on the site captures the user straight away and the call to action button stacked on top (Z-Index), gives the user some direction as soon as the site loads. The simple use of just 3 primary colours was also an element I wanted to replicate on my site. Inspiration also came from Sara's <a href="https://www.sarasoueidan.com/">(Soueidan’s, 2019)</a> website, the black background gives a simple but elegant feel to the website which I strived to replicate. However, I wanted to add my own twist to this as I felt as though the white on black text lacked edge and the headings blended into the background and were washed out.</p>
+<div class="design-images">
+  <img src="../img/3square-shot.png" alt="3 Squared website homepage">
+<img src="../img/sara-shot.png" alt="Sara Soueidan website homepage ">
+
+</div>
+
+<h2>The Video Banner</h2>
+<p>The idea behind the banner is that it shows how I have a passion for content creation and not just code. It gives the user just a little glimpse into the kind of work I’ve been involved in and helps my portfolio stand out from the rest. I decided to use semantic HTML to create the video banner and used the video tag which was introduced in HTML 5. The video tag is also quite well supported, and even works across Internet Explorer (which I’m quickly discovering is every web-developer's worst nightmare) if an MP4 format is provided. </p>
+
+<h2>Mobile First</h2>
+
+<p>With mobiles accounting for almost half 48.91%<a href="https://www.statista.com/statistics/277125/share-of-website-traffic-coming-from-mobile-devices/">(Clement, 2019)</a>of website traffic in the 2nd quarter of 2019, I established that I would build my website and write my CSS for mobiles before focusing on wider screens like desktops. I used <a href="https://prepros.io">(Prepros, 2019)</a> in order to get a live view of my site on different mobile phones, as I noticed that just reducing the width of the browser window on a desktop had a different effect to using real phones. In order to make good use of blank black space on larger screens I used media queries so that the website changes once it reaches 800 pixels. I then used Flexbox and Flex-Direction:Row to change the way my content is displayed.</p>
+
+
+
+<h2>Colour Scheme</h2>
+<p>After seeing <a href="https://www.sarasoueidan.com/">(Soueidan’s, 2019)</a> website I decided I wanted a website with a black background but with more vibrant colours. I wanted my website to be as accessible as possible, therefore I looked into the types of colours I could use on my site <a href="http://www.colourblindawareness.org/colour-blindness/">(Colour Blind Awareness, no date)</a> without alienating users who may have colour blindness. I established that by using a black background with white and bright pink text users were unlikely to get the colours mixed up or lose any colours in the background. I felt as though general users would also love the colour scheme as it stands out, and has a great contrast so it is easy to read.</p>
+
+
+<h2>The Typography</h2>
+
+<p>I wanted the fonts I use on the site to have a fast load time, as the load time on the site already suffers through the use of videos. I stored my fonts locally to speed this load time up. On the headings I wanted a font that was fun and quirky so I went with <span class="special">Special Elite</span>, however for the rest of the content I wanted something a bit more readable and scannable. For this I went with <span class="nunito">Nunito</span> which is much clearer and works well with my white text and black background contrast.</p>
+
+<h2>Site Architecture</h2>
+
+<p>I wanted the structure of the site to be quite simple, with a very limited number of pages. The Nav bar is in both the footer and header as some pages such as the Portfolio page are content heavy so this stops the user having to scroll through the entire page again to get back to the top. I want my portfolio page to be the focal point of the website so all the pages have call to action buttons with ‘View My Work’ on to direct people whether they land on a blog listing or the home page. I have also used a call to action button for users to be able to view my HTML & CSS CV, this will allow any potential employers that just need a CV to view quickly, the opportunity to do so.</p>
+
+
+<div class="blog-navigation">
+  <a href="performance-optimisation.html"><img src="../img/left-arrow.svg" alt="left arrow icon"></a>
+  <a class="left-blog" href="performance-optimisation.html">Performance & Optimisation</a>
+  <a class="right-blog" href="agency-ready.html">Agency Not Ready?</a>
+  <a href="agency-ready.html"><img class="flip" src="../img/right-arrow.svg" alt="right arrow icon"></a>
+  </div>
+
+
+<div class="references">
+<h2>References</h2>
+<ul>
+
+<li>3 Squared. (2019) <i>Transportation & Construction technology company</i>.[Online][Accessed 24th September 2019]<a href="https://www.3squared.com/">https://www.3squared.com/</a></li>
+
+<li>Clement, J. (2019) <i>Percentage of mobile device website traffic worldwide from 1st quarter 2015 to 2nd quarter 2019</i>. Statistica. [Online] [Accessed 24th September 2019]<a href="https://www.statista.com/statistics/277125/share-of-website-traffic-coming-from-mobile-devices/">https://www.statista.com/statistics/277125/share-of-website-traffic-coming-from-mobile-devices/</a></li>
+
+<li>Colour Blind Awareness. (no date) <i>Colour Blindness.</i> [Online] [Accessed September 25th 2019]<a href="http://www.colourblindawareness.org/colour-blindness/"> http://www.colourblindawareness.org/colour-blindness/</a></li>
+
+<li>Prepros. (2019) <i>Compile Sass, Less, Stylus, Jade, CoffeeScript on Mac, Windows & Linux with Live Browser Reload.</i> [Online] [Accessed September 20th 2019]<a href="https://prepros.io/"> https://prepros.io/</a></li>
+
+<li>Souedian, S. (2019) <i>Front-End Development & Training.</i> [Online] [Accessed 4th October 2019]<a href="https://www.sarasoueidan.com/"> https://www.sarasoueidan.com/</a></li>
+
+</ul>
+</div>
+
+</div>
+
+
+
+<section>
+<footer>
+  <h2 id="contact-section">Lets talk?</h2>
+
+<div class="contact-methods">
+<div class="contact-details">
+<h2>My Details</h2>
+<ul>
+<li><a href = "tel:07583646937"><img src="../img/phone.svg" alt="Mobile Phone Icon"><p>07583646937</p></a></li>
+<li><a href = "mailto:agwaterhouse@gmail.com"><img src="../img/email.svg" alt="Email icon"><p>agwaterhouse@gmail.com</p></a></li>
+<li><a href = "https://www.linkedin.com/in/adam-waterhouse-2a113224/"><img src="../img/linkedin.svg" alt="LinkinIn icon"><p>Adam Waterhouse (LinkedIn)</p></a></li>
+<li><a href="https://twitter.com/AdamWaterhous10"><img src="../img/twitter.svg" alt="Twitter Icon"><p>@adamwaterhous10</p></a></li>
+</ul> 
+</div>
+
+<div class="contact-form">
+<form action="../contact_form.php" method="post" data-netlify="true">
+  
+  <p><label for="fullname">Full Name</label></p>
+  <input id="fullname" type="text" name="fullname" placeholder="Enter your full name">
+  
+    <p><label for="email">Email Address</label></p>
+  <input id="email" type="text" name="email" placeholder="Enter your email address">
+
+  <p><label for="message">Message</label></p>
+  <input id="message" type="text" name="message" placeholder="Got a question or just want a chat?">
+  <br>
+
+<div class="button3"><input type="submit" value="Submit"></div>
+</form>
+</div>
+</div>
+<nav>
+<ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../portfolio.html">Portfolio</a></li>
+<li><a href="../blog.html"> Blog</a></li>
+
+</ul>
+</nav>
+
+
+<div class="copyright">
+<p>&#169;Adam Waterhouse 2019</p>
+<p><a href="../credits.html">Image credits</a></p>
+<p><a href="https://validator.w3.org/nu/?showsource=yes&doc=http%3A%2F%2Fwww.17076386.webdevmmu.uk/blogs/building-my-portfolio.html">Validate Page on W3C</a></p>
+</div>
+
+</footer>
+</section>
+</body>
+</html>

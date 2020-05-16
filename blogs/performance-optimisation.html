@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+
+<html lang="en-gb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Read about how I improved every aspect of my website from load time, to search engine optimisation and accessibility. Take a look at how I intend to use data analytics on my site and use this to improve the user experience. You can also get in contact with me through the contact form and contact details provided.">
+  <meta name="author" content="Adam Waterhouse">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance and Optimisation</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="page-header">
+  <video    poster="../img/blog.jpg">
+  </video>
+
+
+
+
+
+  <div class="header-content">
+
+ <nav>
+<ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../portfolio.html">Portfolio</a></li>
+<li><a href="../blog.html">Blog</a></li>
+</ul>
+</nav>
+<div class="main-heading">
+    <h1>Performance and Optimisation</h1></div>
+   <a class="button" href="../portfolio.html">View My Portfolio</a>
+   <a class="button" href="../cv.html">View My CV</a>
+</div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="bread-crumbs">
+        <ul>
+        <li><a href="../blog.html"> Blog</a></li>
+        <li>&#62;</li>
+        <strong><li class="active">Performance and Optimisation
+        </li></strong>
+        </ul>
+        </div>
+
+
+<div class="blog-post">
+
+
+<div class="blog-navigation">
+<a href="treekits-case-study.html"><img src="../img/left-arrow.svg" alt="left arrow icon"></a>
+<a class="left-blog" href="treekits-case-study.html">Treekits - UX Case Study</a>
+<a class="right-blog" href="building-my-portfolio.html">Building My Portfolio</a>
+<a href="building-my-portfolio.html"><img class="flip" src="../img/right-arrow.svg" alt="right arrow icon"></a>
+</div>
+
+
+<div class="date-published">
+    <p class="active">Published: 30/10/2019</p>
+    </div>
+
+<h2>Code</h2>
+
+<p>Before I even thought about creating a style sheet, I validated every page of HTML in my site to ensure I had no warnings or errors using the <a href="https://validator.w3.org/">(W3C, 2013)</a> Markup validator. In Previous projects such as<a href="http://www.17076386.webdevmmu.uk/index.html">Discover Manchester</a>, I chose to validate my HTML at the end of the project, this created issues when I had forgotten to close Div tags. As I had already completed the styling using CSS, this led to some elements on the page behaving unexpectedly once I validated the code I realised that some div tags still needed closing. Therefore, with my portfolio site I chose to take a ‘content first approach’ to design <a href="https://designmodo.com/better-content-first/">(Borowska, 2018)</a> where I was able to get the bare minimum on the page first and build the design around it.</p>
+<div class="design-images">
+<img src="../img/portfolio-no-css.png" alt="Portfolio page of my website with no CSS on it.">
+<img class="screenshot" src="../img/portfolio-css.png" alt="Portfolio page of my website with CSS on it.">
+</div>
+<h2>Accessibility</h2>
+
+<p>I want everything I create to work for everybody that wants to use it, therefore I tried to make my code as accessible and usable as possible. This involved ensuring all images and vectors included in my code also had ALT text available, making them readable for screen readers.
+I have also made much better use of Semantic elements to help structure my site, rather than using unnecessary number of classes. This appropriate use of semantics will also give the site higher priority when it comes to web crawlers indexing my site. 
+</p>
+
+
+
+<h2>Video</h2>
+
+<p>I did have some concerns about the video banner and the time it might take to render every time the user loads the page, especially on slower bandwidths. I came across an article on CSS tricks on using CSS Backgrounds <a href="https://css-tricks.com/should-i-use-a-video-as-a-background/">(Coyier, 2015)</a>, which gave me some useful tips on how to optimise the video for web, such as making it black and white and removing colour to save space.
+I also came across an article on compressing large video files <a href="http://blogs.it.ox.ac.uk/adamweblearn/2013/10/how-to-compress-large-video-files-without-losing-quality-using-handbrake/">(Geng, 2013)</a> using a piece of software called Handbrake. Handbrake allowed me to reduce file sizes from above 100mb, to under 2mb which had a huge effect on the render time of the videos without having a drastic effect on the quality of the video. I also introduced a cover image for my videos, meaning that if a user’s connection is quite poor or their browser can’t play the video, that the user still has a functional header with a picture from the video. 
+</p>
+<div class="design-images">
+<img src="../img/handbreak.png" alt="Screenshot of Handbrake software being used">
+</div>
+
+
+<h2>SEO integration</h2>
+
+<p>I want my portfolio site to be indexed by the major search engines and have used the Google Search Console and Google Analytics to measure the success of the site and establish where the majority of impressions are landing on the site.
+
+In order to keep my website significant I intend to publish regular blogs, at least once a month, this will ensure that my website is seen as relevant and up to date by Search Engines. I want some of the blogs to focus on the projects I’ve worked on or am currently in progress with, this will allow me to create links for users to read more about my projects.
+
+Using links effectively was essential for both the SEO and the accessibility of my website.  This means all my call to action buttons had useful text and direction, such as ‘View My CV’ rather than ‘Click Here’.
+
+I have also made good use of the meta data on every page of my website, which include detailed descriptions of what’s on every page. I have opted not to use the keywords meta tag as search engines no longer use this in rankings <a href="https://webmasters.googleblog.com/2009/09/google-does-not-use-keywords-meta-tag.html">(Google, 2009)</a>. 
+</p>
+
+
+
+<div class="blog-navigation">
+  <a href="treekits-case-study.html"><img src="../img/left-arrow.svg" alt="left arrow icon"></a>
+  <a class="left-blog" href="treekits-case-study.html">Treekits - UX Case Study</a>
+  <a class="right-blog" href="building-my-portfolio.html">Building My Portfolio</a>
+  <a href="building-my-portfolio.html"><img class="flip" src="../img/right-arrow.svg" alt="right arrow icon"></a>
+  </div>
+
+<div class="references">
+<h2>References</h2>
+<ul>
+  <li>Borowska, P. (2018) <i>Creating Better Design with Content First Approach.</i> 9th April. Designmodo. [Online] [Accessed 19th September 2019]<a href="https://designmodo.com/better-content-first/"> https://designmodo.com/better-content-first/</a></li>
+
+  <li>Coyier, C. (2015) <i>Should I use a video as a background?.</i> 29th December. CSS Tricks. [Online] [Accessed 20 September 2019]<a href="https://css-tricks.com/should-i-use-a-video-as-a-background/"> https://css-tricks.com/should-i-use-a-video-as-a-background/</a></li>
+
+  <li>Geng, F. (2013) <i>How to compress large video files without losing quality using Handbrake.</i> 21st October. WebLearn Blog. [Online] [Accessed 9th October 2019]<a href="http://blogs.it.ox.ac.uk/adamweblearn/2013/10/how-to-compress-large-video-files-without-losing-quality-using-handbrake/">http://blogs.it.ox.ac.uk/adamweblearn/2013/10/<br>how-to-compress-large-video-files-without-losing-quality-using-handbrake/</a></li>
+
+  <li>Google. (2009) <i>Google does not use the keywords meta tag in web ranking.</i> 21st September. [Online] [Accessed 1st October 2019]<a href="https://webmasters.googleblog.com/2009/09/google-does-not-use-keywords-meta-tag.html"> https://webmasters.googleblog.com/2009/09/google-does-not-use-keywords-meta-tag.html</a></li>
+
+  <li>W3C. (2013) <i>Markup Validation Service.</i> [Online][Accessed 30th September]<a href="https://validator.w3.org"> https://validator.w3.org/</a></li>
+
+</ul>
+</div>
+</div>
+
+
+
+<section>
+<footer>
+  <h2 id="contact-section">Lets talk?</h2>
+
+<div class="contact-methods">
+<div class="contact-details">
+<h2>My Details</h2>
+<ul>
+<li><a href = "tel:07583646937"><img src="../img/phone.svg" alt="Mobile Phone Icon"><p>07583646937</p></a></li>
+<li><a href = "mailto:agwaterhouse@gmail.com"><img src="../img/email.svg" alt="Email icon"><p>agwaterhouse@gmail.com</p></a></li>
+<li><a href = "https://www.linkedin.com/in/adam-waterhouse-2a113224/"><img src="../img/linkedin.svg" alt="LinkinIn icon"><p>Adam Waterhouse (LinkedIn)</p></a></li>
+<li><a href="https://twitter.com/AdamWaterhous10"><img src="../img/twitter.svg" alt="Twitter Icon"><p>@adamwaterhous10</p></a></li>
+</ul> 
+</div>
+
+<div class="contact-form">
+<form action="../contact_form.php" method="post" data-netlify="true">
+  
+  <p><label for="fullname">Full Name</label></p>
+  <input id="fullname" type="text" name="fullname" placeholder="Enter your full name">
+  
+    <p><label for="email">Email Address</label></p>
+  <input id="email" type="text" name="email" placeholder="Enter your email address">
+
+  <p><label for="message">Message</label></p>
+  <input id="message" type="text" name="message" placeholder="Got a question or just want a chat?">
+  <br>
+
+<div class="button3"><input type="submit" value="Submit"></div>
+</form>
+</div>
+</div>
+<nav>
+<ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../portfolio.html">Portfolio</a></li>
+<li><a href="../blog.html"> Blog</a></li>
+
+</ul>
+</nav>
+
+<div class="copyright">
+<p>&#169;Adam Waterhouse 2019</p>
+<p><a href="../credits.html">Image credits</a></p>
+<p><a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fwww.17076386.webdevmmu.uk/blogs/performance-optimisation.html">Validate Page on W3C</a></p>
+</div>
+
+</footer>
+</section>
+</body>
+</html>

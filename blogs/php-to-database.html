@@ -1,0 +1,546 @@
+
+<!DOCTYPE html>
+
+
+
+<html lang="en-gb">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="description" content="Learn about how I've been using PHP and SQL to help coordinate the response to the Cornavirus Outbreak">
+
+  <meta name="author" content="Adam Waterhouse">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blog - How I’ve been learning PHP and SQL</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../css/black.css">
+
+
+<script src="../script/rainbow-custom.min.js"></script>
+<script src="../script/sql.js"></script>
+
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  
+
+
+<header class="page-header">
+
+  <video    poster="../img/blog.jpg">
+
+  </video>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="header-content">
+
+
+
+ <nav>
+
+<ul>
+
+<li><a href="../index.html">Home</a></li>
+
+<li><a href="../portfolio.html">Portfolio</a></li>
+
+<li><a href="../blog.html">Blog</a></li>
+
+</ul>
+
+</nav>
+
+<div class="main-heading">
+
+    <h1>Using PHP To Manipulate Databases</h1></div>
+
+   <a class="button" href="../portfolio.html">View My Portfolio</a>
+
+   <a class="button" href="../cv.html">View My CV</a>
+
+ </div>
+
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+<div class="bread-crumbs">
+
+  <ul>
+
+  <li><a href="../blog.html"> Blog</a></li>
+
+  <li>&#62;</li>
+
+  <strong><li class="active">Using PHP</li></strong>
+
+  </ul>
+
+  </div>
+
+  
+
+<div class="blog-post">
+
+
+
+<div class="blog-navigation">
+
+<a href="css-animations.html"><img src="../img/left-arrow.svg" alt="left arrow icon"></a>
+
+<a class="left-blog" href="css-animations.html">CSS Animations</a>
+
+<a class="right-blog" href="treekits-case-study.html">Treekits - UX Case Study</a>
+
+<a href="treekits-case-study.html"><img class="flip" src="../img/right-arrow.svg" alt="right arrow icon"></a>
+
+</div>
+
+
+
+<div class="date-published">
+
+<p class="active">Published: 24/03/2020</p>
+
+</div>
+
+
+
+<h2>Why This Project?</h2>
+
+<p>Coronavirus has led to millions of ‘high risk’ <a href="https://www.cdc.gov/coronavirus/2019-ncov/specific-groups/people-at-higher-risk.html">(CDC, 2019)</a> individuals self-isolating. It was brilliant to see Manchester come together with groups like <a href="https://www.facebook.com/groups/1462949617206072/">Manchester Coronavirus Support Network</a> being created to help these vulnerable people. However, there was a lack of collaboration in the group, I saw a flood of posts on the page saying, ‘I can fetch shopping’, ‘I can do trips to hospital appointments’, ‘anyone can call me if they need help’.</p>
+
+<img class="smallimg" alt="Screenshot from Facebook page 'Fallowfield CoronaVirus' where Liam Smyth asks group members to comment on the post with that they can do to help" src="../img/fb-response.png">
+
+<p>Therefore, the aim of the project was to create a system which could help coordinate this response. Through creating a form where people could register their interest to help, a database of all the individuals that could help and the different tasks they could help with, and a secure page where organisers can see all this information.</p>
+
+<h2>View The Live Project</h2>
+
+<p>You can check out the <a href="http://www.17076386.webdevmmu.uk/covid19-support/index.html">Sign Up page here</a> and <a href="http://www.17076386.webdevmmu.uk/covid19-support/login.php">Login to</a> see all the (mock) <a href="http://www.17076386.webdevmmu.uk/covid19-support/index.php"> user information here.</a>
+</p><br>
+
+<p>Username and Password for The Corona Portal:
+</p>
+<p><strong class="active">Username:</strong> user</p>
+<p><strong class="active">Password:</strong> password</p>
+
+
+<div class="design-images">
+  <a href="http://www.17076386.webdevmmu.uk/covid19-support/index.html">
+<img src="../img/form.png" alt="Screenshot of the Coronavirus Support form">
+</a>
+
+<a href="http://www.17076386.webdevmmu.uk/covid19-support/login.php">
+<img src="../img/login.png" alt="Screenshot of login page to view all the users information">
+</a>
+</div>
+
+
+
+
+
+<h2>What Did I Already Know?</h2>
+
+
+<p>As a digital media student, I had very limited experience with backend web technologies and sending information to and from databases. I discovered that I needed to use a ‘server side scripting language’ such as PHP to communicate with and manipulate databases (Carr and Gray, 2018:1). I had briefly used PHP in the development of my contact form for my portfolio website. However, this only involved using the PHP Post function to send submitted data in the form of an email <a href="https://www.formget.com/php-post-get/">(Agarwall,2018).</a></p>
+
+
+<pre><code data-language="php">
+  &#60;?php
+  $fullname = $_POST['fullname'];
+  $email = $_POST['email'];
+  $message = $_POST['message'];
+  
+  $headers = "From: $email\n";
+  $sent = mail('agwaterhouse@gmail.com', 'Website Portfolio Message',$message,$headers);
+  ?&#62;
+ </code></pre>
+
+
+<h2>The Set Up</h2>
+<p>I started by prototyping design ideas for the form using Adobe XD. Forms are often forgotten in the design process <a href="https://www.smashingmagazine.com/2011/06/useful-ideas-and-guidelines-for-good-web-form-design/"> (Borsky, 2011)</a>, however it was crucial that the form looked professional, so that users would trust the system and be prepared to disclose their personal information. The information on the form was influenced by postcards that I had heard about when reading a <a href="https://www.bbc.co.uk/news/uk-england-cornwall-51880695">BBC News (2020) article.</a></p>
+
+
+<div class="facebook-widget">
+<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbecky.wass.7%2Fposts%2F10158040264993149&width=500" width="500" height="572" style="border:none;" scrolling="no" frameborder="0" allowTransparency="true" 
+data-show-text="true"
+allow="encrypted-media"></iframe>
+</div>
+
+<p>During this stage I also created a database using <a href="https://www.phpmyadmin.net/">PHPMyAdmin</a> and replicated the fields from the prototype. I also added one extra column to the database called ID, this was used as a unique identifier and would make any filtering of information easier for users <a href="https://internetofthingsagenda.techtarget.com/definition/unique-identifier-UID">(Rouse, 2019).</a> I set this field up using a basic line of SQL to automatically increment the ID every time a new record was created, giving each record a unique number.</p>
+
+<pre><code data-language="sql">
+  Customer_ID INT NOT NULL AUTO_INCREMENT
+ </code></pre>
+
+
+<h2>The Build</h2>
+<h3>HTML</h3>
+<p>I started the development process by building the different elements of the form. I used label tags instead of the placeholder attribute to ensure that the form was fully accessible <a href="https://www.freecodecamp.org/news/how-to-make-an-accessible-form-its-easier-than-you-think-672d3f4ff573/">(Speek,2019).</a> The HTML &#60;required&#62; tag was used as a form of validation on the form, to ensure certain key fields were filled in. The form I developed used the PHP post function, this sends information in the form of an array via the HTTP header, meaning that this information is invisible <a href="https://www.ostraining.com/blog/coding/retrieve-html-form-data-with-php/">(Zenith, 2006)</a>, this data was then sent to my external PHP file.</p>
+
+  <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="agwaterhouse" data-slug-hash="RwPeVPa" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Form Validation">
+    <span>See the Pen <a href="https://codepen.io/agwaterhouse/pen/RwPeVPa">
+    Form Validation</a> by agwaterhouse (<a href="https://codepen.io/agwaterhouse">@agwaterhouse</a>)
+    on <a href="https://codepen.io">CodePen</a>.</span>
+  </p>
+  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+<p>PHPMyAdmin doesn’t have the most user-friendly interface. Therefore, I had to create a password protected HTML table where all this data would go into after it had been submitted by the user. </p>
+
+<img class="sketches" src="../img/phpmyadmin.png" alt="">
+
+<h3>PHP & SQL</h3>
+
+<p>My first task was to establish a connection between my PHP file and database in PHPMyAdmin. This involved defining the login details for the database and then using an SQL Connect function to create a link. I learnt some basic PHP syntax to store the inputs from the forms into variables(<a href="https://www.ostraining.com/blog/coding/retrieve-html-form-data-with-php/"> Zenith, 2006</a>; Carr and Gray, 2018), this works by assigning the value that the HTML form sent from the name field and storing it in a variable declared with the $ sign.</p>
+<pre><code data-language="php">
+  $name = $_POST['name'];
+  $number = $_POST['number'];
+  $postcode = $_POST['postcode'];
+ </code></pre>
+
+
+<p>However, issues arose when attempting to get the value of the checkboxes, as unlike the other 3 fields that were strings these were either one of two states (ticked or unticked) often known as a Boolean <a href="https://www.computerhope.com/jargon/b/boolean.htm">(Computer Hope, 2019).</a> In order to fix this problem, I had to create a condition with a PHP if statement.</p>
+
+<pre><code data-language="php">
+  if( empty($_POST["$supplies"]) ) { $supplies = "No"; }
+  else { $supplies = "Yes"; }  
+ </code></pre>
+
+
+<p>This code works by checking if the checkbox is empty, if it is empty, then the value of the variable is set to the string ‘No’, if the box isn’t empty then the value of the variable becomes ‘Yes’. Once I had got all the values from the HTML form into the PHP document, they could be sent to my database. I was able to use the PHP myquli query Function <a href="https://www.w3schools.com/php/func_mysqli_query.asp">(W3 Schools, no date)</a> to insert the variables into my ‘helpers’ table.</p>
+
+
+<pre><code data-language="php">
+  mysqli_query($dbc, "INSERT INTO helpers (name, number, postcode, supplies,    mail, dog, hospital ) VALUES('$name', '$number', '$postcode', '$supplies',    '$mail', '$dog', '$hospital') ");
+ </code></pre>
+
+
+<p>This code combined with the <a href="http://www.17076386.webdevmmu.uk/covid19-support/index.html">HTML form</a> allowed users to send their details to the database, however I also needed to automatically place all this data in a HTML table. PHP was used to reconnect to the database, and then create a WHILE loop that inserted the rows of data into my HTML table while there were still rows in the database. Every time the page reloads the while loop runs, meaning that the table will be updated. </p>
+
+
+<pre><code data-language="php">
+  while($rows=mysql_fetch_assoc($result))
+  {
+      ?&#62;
+      &#60;tr&#62;
+        &#60;td&#62; &#60;?php echo $rows['ID']; ?&#62;&#60;/td&#62;
+        &#60;td&#62; &#60;?php echo $rows['name']; ?&#62;&#60;/td&#62;
+        &#60;td&#62; &#60;?php echo $rows['number']; ?&#62;&#60;/td&#62;
+        &#60;td&#62; &#60;?php echo $rows['postcode']; ?&#62;&#60;/td&#62;
+        &#60;td&#62; &#60;?php echo $rows['supplies']; ?&#62;&#60;/td&#62;
+        &#60;td&#62; &#60;?php echo $rows['mail']; ?&#62;&#60;/td&#62;
+        &#60;td&#62; &#60;?php echo $rows['dog']; ?&#62;&#60;/td&#62;
+        &#60;td&#62; &#60;?php echo $rows['hospital']; ?&#62;&#60;/td&#62;
+        &#60;/tr&#62; 
+ </code></pre>
+
+
+<p>Finally, I had to create a basic login to ensure the sensitive data was secure. I used PHP Sessions <a href="https://code.tutsplus.com/tutorials/how-to-use-sessions-and-session-variables-in-php--cms-31839"> (Soni, 2018),</a> to allow user’s data to be used across multiple pages. The aim of this was for the page with the table on to check if the user had logged in, by checking if the users inputted username and password matched the defined ones, if this returned False then the user would be directed back to the login page.</p><br>
+
+<strong><p>Login Page:</p></strong>
+
+<pre><code data-language="php">
+  session_start();
+  $username = "user";
+  $password = "password";
+  if (isset($_SESSION['Loggedin']) && $_SESSION['Loggedin'] == true) {
+      header("Location: yay.php");
+  }
+  if (isset($_POST['username']) && isset($_POST['password'])) {
+      if ($_POST['username'] == $username && $_POST['password'] == $password)
+      {
+          $_SESSION['Loggedin'] = true;
+          header ("Location: yay.php");
+      }
+  }
+ </code></pre>
+
+
+<strong><p>Sucessfull login/Table page</p></strong>
+
+<pre><code data-language="php">
+  &#60;?php 
+session_start();
+if (!isset($_SESSION['Loggedin']) or $_SESSION['Loggedin'] == false ){
+    header("Location: login.php");
+}
+?>
+ </code></pre>
+
+
+
+<p>However, I could not get this piece of code to work, as it created a loop, where every time the user loaded the login they were automatically redirected to the <a href="http://www.17076386.webdevmmu.uk/covid19-support/index.php">success/table page.</a> Therefore, I had to remove the first IF statement which checks if a user is already logged in.</p>
+
+
+<pre><code data-language="php">
+  session_start();
+  $username = "user";
+  $password = "password";
+  if (isset($_POST['username']) && isset($_POST['password'])) {
+      if ($_POST['username'] == $username && $_POST['password'] == $password)
+      {
+          $_SESSION['Loggedin'] = true;
+          header ("Location: yay.php");
+      }
+  }
+ </code></pre>
+
+
+
+<h2>It’s not bad, but I can make it even better</h2>
+
+<p>I think there’s even more I can do with PHP and SQL to create a more secure and more complete user experience. An example is with the issue with sessions, as I had to remove the first IF statement, users can currently <a href="http://www.17076386.webdevmmu.uk/covid19-support/index.php">go directly to the table</a> if they know the URL, as there is nothing to redirect them back to the login page. I could have also used PHP rather than HTML to introduce validation in my form, PHP could have gone further and ensured that the data type was the right format. However, to use the PHP securely in this way you have to use the htmlspecialchars() function <a href="https://www.1keydata.com/php-tutorial/htmlspecialchars.php">(1Keydata, no date),</a> to prevent users entering harmful code into your site. I was unable to get the PHP to convert my variables back to their original values using this function, therefore the user could never log in. I didn’t want to compromise user’s privacy by using unsecure PHP, therefore stuck with HTML front end validation.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="blog-navigation">
+
+    <a href="css-animations.html"><img src="../img/left-arrow.svg" alt="left arrow icon"></a>
+    
+    <a class="left-blog" href="css-animations.html">CSS Animations</a>
+    
+    <a class="right-blog" href="treekits-case-study.html">Treekits - UX Case Study</a>
+    
+    <a href="treekits-case-study.html"><img class="flip" src="../img/right-arrow.svg" alt="right arrow icon"></a>
+    
+    </div>
+
+  <div class="references">
+    <h2>References</h2>
+    <ul>
+
+  <li>
+    1Keydata. (no date) <i>PHP htmlspecialchars Function.</i> [Online] [Accessed on 22nd February 2020] <a href="https://www.1keydata.com/php-tutorial/htmlspecialchars.php">https://www.1keydata.com/php-tutorial/htmlspecialchars.php</a>
+  </li>
+
+  <li>
+    Agarwal, N. (2018) <i>PHP GET and POST Method – Tutorial.</i> 22nd March. FormGet. [Online] [Accessed on 2nd January 2020] <a href="https://www.formget.com/php-post-get/">https://www.formget.com/php-post-get/</a>
+  </li>
+
+
+  <li>
+    BBC News. (2020) <i>Coronavirus: Postcard bid to help self-isolating neighbours. 15th March. [Online] [Accessed on 4th February 2020] <a href="https://www.bbc.co.uk/news/uk-england-cornwall-51880695">https://www.bbc.co.uk/news/uk-england-cornwall-51880695</a></i>
+  </li>
+
+  <li>
+    Borsky, S. (2011) <i>Useful Ideas And Guidelines For Good Web Form Design. </i> 27th June. Smashing Magazine. [Online] [Accessed on 6th January 2020] <a href="https://www.smashingmagazine.com/2011/06/useful-ideas-and-guidelines-for-good-web-form-design/">https://www.smashingmagazine.com/2011/06/useful-ideas-and-guidelines-for-good-web-form-design/</a>
+  </li>
+    
+
+  <li>
+    Carr, D., Gray, M. (2018) <i>Beginning PHP: Master the Latest Features of PHP 7 and Fully Embrace Modern PHP Development.</i> Birmingham: Packet Publishing.
+  </li>
+
+
+  <li>
+    CDC. (2019) <i>People Who are at Higher Risk.</i> [Online] [Accessed on 23rd January 2020] <a href="https://www.cdc.gov/coronavirus/2019-ncov/specific-groups/people-at-higher-risk.html">https://www.cdc.gov/coronavirus/2019-ncov/specific-groups/people-at-higher-risk.html</a>
+  </li>
+
+
+
+  <li>
+    Computer Hope. (2019) <i>Boolean</i> 16th November 2019. [Online] [Accessed on 4th February 2020] <a href="https://www.computerhope.com/jargon/b/boolean.htm">https://www.computerhope.com/jargon/b/boolean.htm</a>
+  </li>
+
+
+
+  <li>
+    Rouse, M. (2019) <i>Unique Identifier (UID).</i> IOT Agenda. [Online] [Accessed on 5th January 2020] <a href="https://internetofthingsagenda.techtarget.com/definition/unique-identifier-UID">https://internetofthingsagenda.techtarget.com/definition/unique-identifier-UID</a>
+  </li>
+
+
+<li>
+  Soni, S. (2018) <i>How to Use Sessions and Session Variables in PHP.</i> 4th October. Envatotuts+. [Accessed on 12th February 2020] <a href="https://code.tutsplus.com/tutorials/how-to-use-sessions-and-session-variables-in-php--cms-31839">https://code.tutsplus.com/tutorials/how-to-use-sessions-and-session-variables-in-php--cms-31839</a>
+</li>
+
+
+<li>
+  Speek, J. (2019) <i>How to make an accessible form: it’s easier than you think</i> 3rd January. Free Code Camp. [Online] [Accessed on 8th January 2020] <a href="https://www.freecodecamp.org/news/how-to-make-an-accessible-form-its-easier-than-you-think-672d3f4ff573/">https://www.freecodecamp.org/news/how-to-make-an-accessible-form-its-easier-than-you-think-672d3f4ff573/</a>
+</li>
+
+<li>
+  W3 Schools. (no date) <i>PHP mysqli query() Function.</i> [Online] [Accessed on 5th February 2020] <a href="https://www.w3schools.com/php/func_mysqli_query.asp">https://www.w3schools.com/php/func_mysqli_query.asp</a>
+</li>
+
+<li>
+  Zenith, J. (2006) <i>How To Retrieve HTML Form Data With PHP.</i> 2nd November. OS Training. [Online] [Accessed 1st February 2020] <a href="https://www.ostraining.com/blog/coding/retrieve-html-form-data-with-php/">https://www.ostraining.com/blog/coding/retrieve-html-form-data-with-php/</a>
+</li>
+
+    </ul>
+    
+    </div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<section>
+
+<footer>
+
+  <h2 id="contact-section">Lets talk?</h2>
+
+
+
+<div class="contact-methods">
+
+<div class="contact-details">
+
+<h2>My Details</h2>
+
+<ul>
+
+<li><a href = "tel:07583646937"><img src="../img/phone.svg" alt="Mobile Phone Icon"><p>07583646937</p></a></li>
+
+<li><a href = "mailto:agwaterhouse@gmail.com"><img src="../img/email.svg" alt="Email icon"><p>agwaterhouse@gmail.com</p></a></li>
+
+<li><a href = "https://www.linkedin.com/in/adam-waterhouse-2a113224/"><img src="../img/linkedin.svg" alt="LinkinIn icon"><p>Adam Waterhouse (LinkedIn)</p></a></li>
+
+<li><a href="https://twitter.com/AdamWaterhous10"><img src="../img/twitter.svg" alt="Twitter Icon"><p>@adamwaterhous10</p></a></li>
+
+</ul> 
+
+</div>
+
+
+
+<div class="contact-form">
+
+<form action="../contact_form.php" method="post" data-netlify="true">
+
+  
+
+  <p><label for="fullname">Full Name</label></p>
+
+  <input id="fullname" type="text" name="fullname" placeholder="Enter your full name">
+
+  
+
+    <p><label for="email">Email Address</label></p>
+
+  <input id="email" type="text" name="email" placeholder="Enter your email address">
+
+
+
+  <p><label for="message">Message</label></p>
+
+  <input id="message" type="text" name="message" placeholder="Got a question or just want a chat?">
+
+  <br>
+
+
+
+<div class="button3"><input type="submit" value="Submit"></div>
+
+</form>
+
+</div>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="../index.html">Home</a></li>
+
+<li><a href="../portfolio.html">Portfolio</a></li>
+
+<li><a href="../blog.html"> Blog</a></li>
+
+
+
+</ul>
+
+</nav>
+
+
+
+<div class="copyright">
+
+<p>&#169;Adam Waterhouse 2019</p>
+
+<p><a href="../credits.html">Image credits</a></p>
+
+<p><a href="https://validator.w3.org/nu/?showsource=yes&doc=http%3A%2F%2Fwww.17076386.webdevmmu.uk/blogs/agency-ready.html">Validate Page on W3C</a></p></div>
+
+
+
+</footer>
+
+</section>
+
+</body>
+
+</html>

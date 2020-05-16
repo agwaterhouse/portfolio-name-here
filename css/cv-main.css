@@ -1,0 +1,283 @@
+@font-face {
+  font-family:'Special Elite';
+  src: url(../fonts/SpecialElite-Regular.woff2);
+}
+
+
+
+body{
+  margin: 0;
+  background-color: black;
+
+
+}
+
+
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+}
+
+
+body p, li, h3, h4{
+  font-family:'Nunito', sans-serif;
+  margin-bottom: 0;
+  color: white;
+
+
+}
+
+a{
+  color: #FF1493;
+  font-weight: bold;
+    font-family: 'Assistant', sans-serif;
+
+}
+
+
+h2{
+  padding-top: 1rem;
+}
+
+
+.contact-details ul{
+  display: flex;
+  flex-direction: column;
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0;
+}
+
+.contact-details li{
+  padding-bottom: 0.5rem;
+}
+
+.button{
+  background-color: black;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 0.8rem;
+    background-color: black; 
+  color: white; 
+  border: 2px solid #FF1493  ;
+}
+
+.button:hover{
+  background-color: #FF1493;
+  color: white;
+}
+
+h1, h2{
+  font-family: 'Special Elite', cursive;
+  text-align: center;
+  color: white;
+}
+
+
+
+
+h1{
+  font-size: 3rem;
+}
+
+header{
+  min-height: 70vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  border: 2px solid #FF1493;
+  color: white;
+  border-bottom: 0;
+}
+
+header img{
+  width: 10rem;
+  text-align: center;
+  }
+
+header ul{
+  list-style-type: none;
+  list-style-position: none;
+  text-decoration: none;
+  text-align: center;
+}
+
+header a{
+  color: white;
+}
+
+.experience ul{
+  list-style-type: none;
+}
+
+.education ul{
+  list-style-type: none;
+}
+
+.referees ul{
+  list-style-type: none;
+    list-style-type: disc;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0
+}
+
+.referees li{
+  padding-bottom: 1rem;
+}
+
+.skills{
+  border: 2px solid #FF1493  ;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+
+
+main{
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+
+
+}
+
+
+
+ h1,h2{
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+
+}
+
+
+
+.referees{
+  width: 100%;
+  text-align: center;
+}
+
+
+
+.referees h2{
+  text-align: center;
+}
+
+.skills{
+  display: inline-block;
+    width: 100%;
+   
+}
+
+.personal-statement{
+  display: inline-block;
+    padding-left: 2rem;
+  padding-right: 2rem;
+  border: 2px solid #FF1493;
+  border-bottom: none;
+}
+
+.experience{
+  display: inline-block;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border: 2px solid #FF1493;
+}
+
+.education{
+  display: inline-block;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border: 2px solid #FF1493;
+  border-right: 0;
+}
+
+
+.ps-skills{
+margin-bottom: 0;
+}
+
+.skills{
+  margin: 0;
+}
+.personal-statement{
+  margin: 0;
+}
+
+@media only screen and (min-width: 915px) {
+ 
+ h1,h2{
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 0;
+
+}
+
+
+
+.ps-skills{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.skills{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 50%;
+  text-align: left;
+  padding-left: 2rem;
+
+}
+
+.personal-statement{
+  width: 50%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+
+.exp-edu{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.experience{
+display: flex;
+flex-direction: column;
+width: 65%;
+padding-left: 2rem;
+padding-right: 2rem;
+
+}
+
+.education{
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+}

@@ -1,0 +1,424 @@
+
+<!DOCTYPE html>
+
+
+
+<html lang="en-gb">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="description" content="Read my blog on how I improved the my own portfolio website, in terms of design, accessibility and UX.">
+
+  <meta name="author" content="Adam Waterhouse">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blog - Portfolio Improvements</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+<header class="page-header">
+
+  <video    poster="../img/blog.jpg">
+
+  </video>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="header-content">
+
+
+
+ <nav>
+
+<ul>
+
+<li><a href="../index.html">Home</a></li>
+
+<li><a href="../portfolio.html">Portfolio</a></li>
+
+<li><a href="../blog.html">Blog</a></li>
+
+</ul>
+
+</nav>
+
+<div class="main-heading">
+
+    <h1>Portfolio Improvements</h1></div>
+
+   <a class="button" href="../portfolio.html">View My Portfolio</a>
+
+   <a class="button" href="../cv.html">View My CV</a>
+
+ </div>
+
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+<div class="bread-crumbs">
+
+  <ul>
+
+  <li><a href="../blog.html"> Blog</a></li>
+
+  <li>&#62;</li>
+
+  <strong><li class="active">Portfolio Improvements</li></strong>
+
+  </ul>
+
+  </div>
+
+  
+
+<div class="blog-post">
+
+
+
+<div class="blog-navigation">
+
+<a href="agency-ready.html"><img src="../img/left-arrow.svg" alt="left arrow icon"></a>
+
+<a class="left-blog" href="agency-ready.html">Agency Ready?</a>
+
+<a class="right-blog" href="css-animations.html">CSS Animations</a>
+
+<a href="css-animations.html"><img class="flip" src="../img/right-arrow.svg" alt="right arrow icon"></a>
+
+</div>
+
+
+
+<div class="date-published">
+
+<p class="active">Published: 14/03/2020</p>
+
+</div>
+
+
+
+
+
+<p>I have recently been reading the brilliant Krug’s (2013) ‘Don’t make me think’, and ironically it made me think about all the parts of <a href="http://www.17076386.webdevmmu.uk/Archived/index.html">my original portfolio site</a> which were not user-centric. After reading Steve’s book and working on real client based UX projects at <a href="https://www.supremo.co.uk/">Supremo</a>, I have revisited my portfolio to start to practice what I preach with my own site.</p>
+
+
+
+
+
+<h2>Hover States</h2>
+
+<p>I added hover states to the clickable areas of the website, especially the ones with a small clickable target area, such as the contact me links in the footer. This will allow desktop users to be confident that they are clicking on the right link. Furthermore different link colour text ‘is not enough for the colorblind’ <a href="https://uxmovement.com/buttons/why-your-links-need-a-hover-effect/">(Thomas, 2015:online),</a> as these users rely on seeing a change in colour in order to detect if certain text is a link.</p>
+
+<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="agwaterhouse" data-slug-hash="dyogEYb" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Hover States">
+  <span>See the Pen <a href="https://codepen.io/agwaterhouse/pen/dyogEYb">
+  Hover States</a> by agwaterhouse (<a href="https://codepen.io/agwaterhouse">@agwaterhouse</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+
+<h2>Breadcrumbs</h2>
+
+<p>The introduction of breadcrumbs ensured users know their current position on the website and where they came from (Krug, 2013). The breadcrumbs are hyperlinked to allow a user to go back a step if they make a mistake, or to read a different blog.</p>
+
+<div class="design-images screenshot">
+<img src="../img/breadcrumbs.PNG" alt="Screenshot of the breadcrumbs used to imrpove the UX of my portfolio website">
+</div>
+
+
+<h2>Clickable Areas</h2>
+
+
+<p>I increased the clickable area of the blog listing section, so that the entire rectangle was clickable rather than just the text. <a href="https://ishadeed.com/article/clickable-area">Shadeed (2019)</a> talks of how larger target areas for the user will lead to them spending less time trying to interact with the component and improve their user experience.</p>
+
+<p class="codepen" data-height="259" data-theme-id="dark" data-default-tab="css,result" data-user="agwaterhouse" data-slug-hash="GRJYajq" style="height: 259px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Clickable areas">
+  <span>See the Pen <a href="https://codepen.io/agwaterhouse/pen/GRJYajq">
+  Clickable areas</a> by agwaterhouse (<a href="https://codepen.io/agwaterhouse">@agwaterhouse</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<h2>Active States</h2>
+
+<p>The large video header occupies 70% of the users view height and is on several different pages, this made it difficult for users to decipher which page they were currently on.  Lynch and Horton (2016:210) talk of ‘how design should offer constant visual and functional confirmation of the user’s whereabout’. In order to achieve this, I added active states to elements in the navigation, so the user could decipher which page they were currently on.</p>
+
+
+
+
+
+<h2>Spacing</h2>
+
+<p>Similarly, I added more white space to help users distinguish between different sections of my portfolio, this helped to create a clear visual hierarchy <a href="https://www.interaction-design.org/literature/article/visual-hierarchy-organizing-content-to-follow-natural-eye-movement-patterns"> (Soegaard, 2020)</a>. I also used borders and lines to mark out clearer and more obvious sections for the users. </p>
+
+
+<h2>The CV Page</h2>
+
+
+
+<p>What’s the worse graphic design you’ve ever seen? Maybe this……</p>
+
+
+
+
+
+<blockquote class="twitter-tweet tw-align-center" data-theme="dark"><p lang="en" dir="ltr">Now is the time for MPs to back the new deal and get Brexit done.<a href="https://twitter.com/hashtag/GetBrexitDone?src=hash&amp;ref_src=twsrc%5Etfw">#GetBrexitDone</a> <a href="https://t.co/JuqaOVdlMC">pic.twitter.com/JuqaOVdlMC</a></p>&mdash; Conservatives (@Conservatives) <a href="https://twitter.com/Conservatives/status/1186650398037331968?ref_src=twsrc%5Etfw">October 22, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  
+
+  <p>..for me it was the design of my own CV. The design made the user feel that they had entered a completely different website. I redesigned the CV section of my portfolio website and incorporated the style guide used for the rest of the site.</p>
+
+
+
+  <div class="design-images">
+
+
+
+<img src="../img/oldcv.png" alt="Screenshot of Adam's old CV layout">
+
+<img src="../img/newcv.png" alt="Screenshot of Adam's new CV layout">
+
+
+
+</div>
+
+
+
+<h2>Contrast</h2>
+
+<p>I also added a slightly transparent black background to the navigation bar, this was to ensure that the white text links appeared on brighter screens such as mobiles. This improves the experience for disabled users who may have a visual impairment, but also for users who may be seen as ‘disabled’ in a certain situation such as looking at their phone on a bright summer day <a href="https://www.w3.org/WAI/perspective-videos/contrast/"> (Abou-Zahra, 2019).</a></p>
+
+
+
+
+
+
+
+<h2>Normalize CSS</h2>
+
+<p>I added <a href="http://nicolasgallagher.com/about-normalize-css/">Nomalize.css</a> to my code base, this works similar to <a href="https://gist.github.com/DavidWells/18e73022e723037a50d6">Reset.css</a>, however it maintains useful browser defaults which reset.css removes <a href="http://nicolasgallagher.com/about-normalize-css/">(Gallagher, 2012).</a> It enabled greater consistency between different browsers, allowing me to ensure a consistent user experience no matter what browser the user is running.</p>
+
+
+<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="agwaterhouse" data-slug-hash="GRJYaBm" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Normalize.CSS">
+  <span>See the Pen <a href="https://codepen.io/agwaterhouse/pen/GRJYaBm">
+  Normalize.CSS</a> by agwaterhouse (<a href="https://codepen.io/agwaterhouse">@agwaterhouse</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="agwaterhouse" data-slug-hash="KKpGLbG" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Without Normalize.CSS">
+  <span>See the Pen <a href="https://codepen.io/agwaterhouse/pen/KKpGLbG">
+  Without Normalize.CSS</a> by agwaterhouse (<a href="https://codepen.io/agwaterhouse">@agwaterhouse</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+<div class="blog-navigation">
+
+  <a href="agency-ready.html"><img src="../img/left-arrow.svg" alt="left arrow icon"></a>
+  
+  <a class="left-blog" href="agency-ready.html">Agency Ready?</a>
+  
+  <a class="right-blog" href="css-animations.html">CSS Animations</a>
+  
+  <a href="css-animations.html"><img class="flip" src="../img/right-arrow.svg" alt="right arrow icon"></a>
+  
+  </div>
+
+  <div class="references">
+    <h2>References</h2>
+    <ul>
+
+      <li>Abou-Zahra, S. (2019) <i>Colors with Good Contrast</i>. 23rd January. W3C. [Online] [Accessed 20th December 2019]<a href="https://www.w3.org/WAI/perspective-videos/contrast/">https://www.w3.org/WAI/perspective-videos/contrast/</a></li>
+      
+    <li>Gallagher, N. (2012) <i>About normalize.css</i>. 28th February. [Online] [Accessed 2nd February 2020] <a href="http://nicolasgallagher.com/about-normalize-css/">http://nicolasgallagher.com/about-normalize-css/</a></li>
+
+
+    <li>Krug, S. (2013) <i>Don't make me think, revisited: a common sense approach to web usability</i>. 3rd ed., United States of America: New Riders.</li>
+
+    <li>Lynch, P.J., Horton, S. (2016) <i>Web Style Guide: Foundations of User Experience Design</i>.  4th ed., New Haven: Yale University Press.</li>
+
+    <li>Shadeed, A. (2019) <i>Enhancing The Clickable Area Size</i>. 13th August. [Online] [Accessed 9th January 2020] <a href="https://ishadeed.com/article/clickable-area">https://ishadeed.com/article/clickable-area</a></li>
+
+    <li>Soegaard, M. (2020) <i>Visual Hierarchy: Organizing content to follow natural eye movement patterns</i>. 1st March. Interaction Design Foundation. [Online] [Accessed December 20th 2019 <a href="https://www.interaction-design.org/literature/article/visual-hierarchy-organizing-content-to-follow-natural-eye-movement-patterns">https://www.interaction-design.org/literature/article/visual-hierarchy-organizing-content-to-follow-natural-eye-movement-patterns</a></li>
+
+    
+    </ul>
+    
+    </div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<section>
+
+<footer>
+
+  <h2 id="contact-section">Lets talk?</h2>
+
+
+
+<div class="contact-methods">
+
+<div class="contact-details">
+
+<h2>My Details</h2>
+
+<ul>
+
+<li><a href = "tel:07583646937"><img src="../img/phone.svg" alt="Mobile Phone Icon"><p>07583646937</p></a></li>
+
+<li><a href = "mailto:agwaterhouse@gmail.com"><img src="../img/email.svg" alt="Email icon"><p>agwaterhouse@gmail.com</p></a></li>
+
+<li><a href = "https://www.linkedin.com/in/adam-waterhouse-2a113224/"><img src="../img/linkedin.svg" alt="LinkinIn icon"><p>Adam Waterhouse (LinkedIn)</p></a></li>
+
+<li><a href="https://twitter.com/AdamWaterhous10"><img src="../img/twitter.svg" alt="Twitter Icon"><p>@adamwaterhous10</p></a></li>
+
+</ul> 
+
+</div>
+
+
+
+<div class="contact-form">
+
+<form action="../contact_form.php" method="post" data-netlify="true">
+
+  
+
+  <p><label for="fullname">Full Name</label></p>
+
+  <input id="fullname" type="text" name="fullname" placeholder="Enter your full name">
+
+  
+
+    <p><label for="email">Email Address</label></p>
+
+  <input id="email" type="text" name="email" placeholder="Enter your email address">
+
+
+
+  <p><label for="message">Message</label></p>
+
+  <input id="message" type="text" name="message" placeholder="Got a question or just want a chat?">
+
+  <br>
+
+
+
+<div class="button3"><input type="submit" value="Submit"></div>
+
+</form>
+
+</div>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="../index.html">Home</a></li>
+
+<li><a href="../portfolio.html">Portfolio</a></li>
+
+<li><a href="../blog.html"> Blog</a></li>
+
+
+
+</ul>
+
+</nav>
+
+
+
+<div class="copyright">
+
+<p>&#169;Adam Waterhouse 2019</p>
+
+<p><a href="../credits.html">Image credits</a></p>
+
+<p><a href="https://validator.w3.org/nu/?showsource=yes&doc=http%3A%2F%2Fwww.17076386.webdevmmu.uk/blogs/agency-ready.html">Validate Page on W3C</a></p></div>
+
+
+
+</footer>
+
+</section>
+
+</body>
+
+</html>
